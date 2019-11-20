@@ -40,5 +40,5 @@ const styles = {
   },
 };
 
-export default Loading;
-splash 
+export default Splash;
+ 

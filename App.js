@@ -6,6 +6,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { createStackNavigator, createSwitchNavigator, createDrawerNavigator, NavigationActions } from 'react-navigation';
 import { Root, Toast } from 'native-base';
 import { Provider } from 'react-redux';
+import Splash from './screens/splash';
+import Home from './screens/splash';
 
 const AppSwitchNavigator = createSwitchNavigator({
   Splash,
