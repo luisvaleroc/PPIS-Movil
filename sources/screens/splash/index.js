@@ -4,7 +4,7 @@ import { View, ActivityIndicator, StatusBar } from 'react-native';
 
 import { isAuthenticated } from '../../security';
 
-
+class Splash 
 extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,7 @@ extends Component {
 
     auth = async () => {
       //const authenticated = await isAuthenticated();
-      //const authenticated = true;
+      const authenticated = true;
       const { navigation } = this.props;
       if (authenticated) {
         navigation.navigate('Home');
@@ -41,3 +41,4 @@ const styles = {
 };
 
 export default Loading;
+splash 
