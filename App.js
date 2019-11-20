@@ -4,20 +4,20 @@ import { Container, Text } from 'native-base';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import { createStackNavigator, createSwitchNavigator, createDrawerNavigator, NavigationActions } from 'react-navigation';
+import { Root, Toast } from 'native-base';
+import { Provider } from 'react-redux';
 
 const AppSwitchNavigator = createSwitchNavigator({
+  Splash,
   Home
-}, { initialRouteName: 'Loading' });
-
-const AppSwitchNavigator = createSwitchNavigator({
-  Home
-}, { initialRouteName: 'Loading' });
+}, { initialRouteName: 'Splash' });
 const DrawerStack = createDrawerNavigator({
   //menudrawell
 }, {
   headerMode: 'float',
   drawerPosition: 'left',
   contentComponent: props => <SideBar {...props} />,
+  
 });
 
 
@@ -40,9 +40,7 @@ export default class App extends React.Component {
       setAuthorizationHeader(AccesToken.access_token);
     }
   }
-  componentDidMount() {
-    this.notificationSubscription = Notifications.addListener(this.handleNotification);
-  }
+  
 
 
   async componentDidMount() {
@@ -53,7 +51,7 @@ export default class App extends React.Component {
     });
     this.setState({ isReady: true });
 
-    his.notificationSubscription = Notifications.addListener(this.handleNotification);
+    this.notificationSubscription = Notifications.addListener(this.handleNotification);
 
   }
 
@@ -63,9 +61,11 @@ export default class App extends React.Component {
     }
 
     return (
-      <Container>
-        <Text>Open up App.js to start working on your app!</Text>
-      </Container>
+      <Root>
+        <Provider store={configureStore()}>
+          <AppSwitchNavigator ref={(navigatorRef) => { this.navigatorRef = navigatorRef; }} />
+        </Provider>
+      </Root>
     );
   }
 }
