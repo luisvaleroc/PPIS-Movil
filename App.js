@@ -6,8 +6,9 @@ import { Ionicons } from '@expo/vector-icons';
 import { createStackNavigator, createSwitchNavigator, createDrawerNavigator, NavigationActions } from 'react-navigation';
 import { Root, Toast } from 'native-base';
 import { Provider } from 'react-redux';
-import Splash from './screens/splash';
-import Home from './screens/splash';
+import Splash from './sources/screens/splash';
+import Home from './sources/screens/home';
+import Sidebar from './sources/screens/sidebar';
 
 const AppSwitchNavigator = createSwitchNavigator({
   Splash,
@@ -35,7 +36,7 @@ export default class App extends React.Component {
   componentWillMount = async () => {
     const AccesToken = await getTokenData();
     initInterceptor(() => {
-      this.navigatorRef.dispatch(NavigationActions.navigate({ routeName: 'Login' }));
+      this.navigatorRef.dispatch(NavigationActions.navigate({ routeName: 'Home' }));
     });
 
     if (AccesToken) {

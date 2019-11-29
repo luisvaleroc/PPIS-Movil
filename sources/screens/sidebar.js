@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { Container, Content, Text, List, ListItem } from 'native-base';
 import { LinearGradient, Notifications, Constants } from 'expo';
 import decode from 'jwt-decode';
-import * as actions from '../store/general/actions';
+
 import logo from '../../assets/icon.png';
 import UserService from '../services/users';
 import { logOut, getTokenData } from '../security';

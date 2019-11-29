@@ -8,3 +8,5 @@ export const STORAGE_KEYS = {
   AUTH_STATE: 'AUTH_STATE',
   TOKEN_DATA: 'TOKEN_DATA',
 };
+
+export const GATEWAY_API_URL = getApiUrl(Constants.manifest.releaseChannel);
