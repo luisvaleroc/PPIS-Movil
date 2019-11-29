@@ -1,5 +1,5 @@
 import decode from 'jwt-decode';
-import { getKey, saveKey, keyExist, removeKey } from '../common/storage';
+import { getKey, saveKey, keyExist, removeKey } from '../commons/storage';
 import { STORAGE_KEYS } from '../boot/config';
 export const isAuthenticated = () => {
   try {

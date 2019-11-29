@@ -1,6 +1,6 @@
-import Service from '../Service';
+import Service from '../service';
 import axios from 'axios';
-import { createServiceUrl } from '../../common/helpers/service';
+import { createServiceUrl } from '../../commons/helpers/service';
 
 class UserService extends Service {
     authenticateUser = credentials =>

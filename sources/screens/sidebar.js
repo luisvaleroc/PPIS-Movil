@@ -28,15 +28,15 @@ class SideBar extends Component {
     const userService = new UserService();
     const userid = decode(authenticated).id;
 
-    userService.logout(userid).then(() => {
-      Notifications.dismissAllNotificationsAsync();
-      Notifications.setBadgeNumberAsync(1);
-      Notifications.setBadgeNumberAsync(0);
+    // userService.logout(userid).then(() => {
+    //   Notifications.dismissAllNotificationsAsync();
+    //   Notifications.setBadgeNumberAsync(1);
+    //   Notifications.setBadgeNumberAsync(0);
 
       logOut().then(() => {
         this.props.navigation.navigate('Loading');
       });
-    });
+    // });
   };
 
   viewHasntPermission = (route, evaluatingRoute, permission) => {
