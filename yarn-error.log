@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Cuarto\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-native-gesture-handle
+  C:\Program Files\nodejs\node.exe C:\Users\Cuarto\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add reac-native-reanimated
 
 PATH: 
   C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Bitnami\wampstack\php;C:\ProgramData\ComposerSetup\bin;C:\Users\Cuarto\AppData\Local\Microsoft\WindowsApps;;C:\Users\Cuarto\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Cuarto\AppData\Roaming\npm;C:\Users\Cuarto\AppData\Roaming\Composer\vendor\bin;C:\Program Files\heroku\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/react-native-gesture-handle: Not found
+  Error: https://registry.yarnpkg.com/reac-native-reanimated: Not found
       at Request.params.callback [as _callback] (C:\Users\Cuarto\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66926:18)
       at Request.self.callback (C:\Users\Cuarto\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140564:22)
       at Request.emit (events.js:198:13)
@@ -45,8 +45,10 @@ npm manifest:
       "react": "16.8.3",
       "react-dom": "16.8.3",
       "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+      "react-native-gesture-handler": "^1.5.2",
       "react-native-web": "^0.11.7",
       "react-navigation": "^4.0.10",
+      "react-navigation-drawer": "^2.3.3",
       "react-redux": "^7.1.3",
       "redux": "^4.0.4",
       "redux-thunk": "^2.3.0",
@@ -2662,6 +2664,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
     integrity sha1-8QdIy+dq+WS3yWyTxrzCivEgwIE=
   
+  hammerjs@^2.0.8:
+    version "2.0.8"
+    resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+    integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
+  
   has-ansi@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/has-ansi/-/has-ansi-2.0.0.tgz#34f5049ce1ecdf2b0649af3ef24e45ed35416d91"
@@ -4544,6 +4551,16 @@ Lockfile:
     dependencies:
       lodash "^4.17.15"
   
+  react-native-gesture-handler@^1.5.2:
+    version "1.5.2"
+    resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.5.2.tgz#281111550bf1eee10b7feba5278d142169892731"
+    integrity sha512-Xp03dq4XYVTD0xmWx4DW4eX+ox1NQLjHmbykspTdS5FCNIVIOekVXRLFCw1698/v8dYUHApNo6K3s3BCD8fqPA==
+    dependencies:
+      hammerjs "^2.0.8"
+      hoist-non-react-statics "^2.3.1"
+      invariant "^2.2.4"
+      prop-types "^15.7.2"
+  
   react-native-iphone-x-helper@^1.0.3:
     version "1.2.1"
     resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
@@ -4655,6 +4672,11 @@ Lockfile:
       ws "^1.1.5"
       xmldoc "^0.4.0"
       yargs "^9.0.0"
+  
+  react-navigation-drawer@^2.3.3:
+    version "2.3.3"
+    resolved "https://registry.yarnpkg.com/react-navigation-drawer/-/react-navigation-drawer-2.3.3.tgz#d7e607d5e10f2b3c40ab7dc9720228ce3f888a0f"
+    integrity sha512-d/rA8Slqv7HoMfONKVDBQUrRF7YQH796Gzal/KOhaY4VOwUUqIwfxMRJ3WrsdL2OkDPixtkXJE2Fz6KAj658uA==
   
   react-navigation@^4.0.10:
     version "4.0.10"

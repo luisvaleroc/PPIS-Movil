@@ -1,30 +1,32 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { AppLoading } from 'expo';
 import { Container, Text } from 'native-base';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
-import { createStackNavigator, createSwitchNavigator, createDrawerNavigator, NavigationActions } from 'react-navigation';
+import {  createSwitchNavigator, NavigationActions } from 'react-navigation';
+import { createDrawerNavigator } from 'react-navigation-drawer';
 import { Root, Toast } from 'native-base';
 import { Provider } from 'react-redux';
 import Splash from './sources/screens/splash';
 import Home from './sources/screens/home';
-import Sidebar from './sources/screens/sidebar';
-
-const AppSwitchNavigator = createSwitchNavigator({
-  Splash,
-  Home
-}, { initialRouteName: 'Splash' });
+import SideBar from './sources/screens/sidebar';
+import { createStackNavigator } from 'react-navigation-stack';
+const homeStack = createStackNavigator({Home},{headerMode:'none'})
 const DrawerStack = createDrawerNavigator({
-  //menudrawell
+  homeStack,
 }, {
   headerMode: 'float',
   drawerPosition: 'left',
   contentComponent: props => <SideBar {...props} />,
   
 });
+const AppSwitchNavigator = createSwitchNavigator({
+  Splash,
+  Home,
+  DrawerStack,
+}, { initialRouteName: 'Splash' });
 
-
-export default class App extends React.Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
